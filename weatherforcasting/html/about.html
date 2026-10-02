@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — WeatherCast</title>
+    <meta name="description" content="Learn about WeatherCast — a full-stack weather forecasting web application built with HTML, CSS, JavaScript, PHP, MySQL, and OpenWeather API.">
+    <link rel="stylesheet" href="../css/weather.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="bg-orbs">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="weather.html" class="nav-logo">
+                <div class="logo-icon">⛅</div>
+                <span>WeatherCast</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="weather.html">Home</a>
+                <a href="forecast.html">Forecast</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-auth" id="navAuth"></div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero" style="padding-bottom: 20px;">
+            <h1>About <span class="gradient-text">WeatherCast</span></h1>
+            <p>A full-stack weather forecasting application demonstrating modern web development technologies and best practices.</p>
+        </section>
+
+        <section class="about-section">
+            <div class="about-grid">
+
+                <!-- Project Description -->
+                <div class="about-card">
+                    <div class="card-icon">🌤️</div>
+                    <h3>What is WeatherCast?</h3>
+                    <p>WeatherCast is a web-based weather application that allows users to search for any city and view comprehensive weather information including temperature, weather conditions, humidity, wind speed, atmospheric pressure, weather icons, and a multi-day forecast.</p>
+                    <p style="margin-top: 12px;">The application features user registration and login, search history tracking, favourite cities management, and a responsive design that works seamlessly across all devices.</p>
+                </div>
+
+                <!-- Objectives -->
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Project Objectives</h3>
+                    <ul>
+                        <li>Develop a user-friendly weather forecasting website</li>
+                        <li>Allow users to search weather by city name</li>
+                        <li>Display real-time current weather information</li>
+                        <li>Show temperature, humidity, wind speed, pressure, and conditions</li>
+                        <li>Display appropriate weather icons</li>
+                        <li>Provide a multi-day weather forecast</li>
+                        <li>Implement user registration and login system</li>
+                        <li>Maintain search history for logged-in users</li>
+                        <li>Provide a favourite-city feature</li>
+                        <li>Create a responsive website for all screen sizes</li>
+                    </ul>
+                </div>
+
+                <!-- Technology Stack -->
+                <div class="about-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Technology Stack</h3>
+                    <p>WeatherCast demonstrates integration of multiple web technologies working together as a full-stack application.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">OpenWeather API</span>
+                        <span class="tech-tag">Apache / XAMPP</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <!-- Architecture -->
+                <div class="about-card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>System Architecture</h3>
+                    <p>The frontend provides an interactive and responsive interface using HTML, CSS, and JavaScript. JavaScript communicates with the OpenWeather API to fetch live weather data and dynamically updates the page.</p>
+                    <p style="margin-top: 12px;">PHP handles server-side operations including user authentication, search history, and favourite cities. MySQL stores all persistent application data including user accounts, search records, and favourite city lists.</p>
+                </div>
+
+                <!-- Features -->
+                <div class="about-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time weather data from OpenWeather API</li>
+                        <li>Current weather with detailed metrics</li>
+                        <li>5-day weather forecast</li>
+                        <li>City search with validation</li>
+                        <li>User registration with secure password hashing</li>
+                        <li>Login/logout with PHP sessions</li>
+                        <li>Search history tracking</li>
+                        <li>Favourite cities management</li>
+                        <li>Responsive design for all devices</li>
+                        <li>Error handling and user feedback</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">⛅ WeatherCast</div>
+            <p>Real-time weather forecasting powered by OpenWeather API</p>
+            <p>© 2026 WeatherCast. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="weather.html">Home</a>
+                <a href="forecast.html">Forecast</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/validation.js"></script>
+
+</body>
+</html>

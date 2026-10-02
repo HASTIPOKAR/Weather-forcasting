@@ -1,0 +1,59 @@
+
+.div1{
+    height: 400px;
+    width: 300px;
+    background-color: aqua;
+    padding : 29px 30 px;
+    margin: 20px;
+    border: 5px solid black;
+    float: right;
+;
+}
+h1{
+    text-shadow: 0px 0px 5px blue ,0px 0px 5px red;
+}
+
+.div2{
+    height: 400px;
+    width: 300px;
+    background-color:lightblue;
+    padding : 29px 30 px;
+    margin: 20px;
+    border: 5px dotted black;
+    float: right;
+   
+}
+
+.div3{
+    height: 400px;
+    width: 300px;
+    background-color: lightgreen;
+    padding : 29px 30 px;
+    margin: 20px;
+    border: 5px dashed lightpink;
+    float: right;
+
+}
+body {
+            background-color: lightpink; 
+            background-image: url('weather.jpeg');      
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-attachment: fixed; 
+            Bbackgound-image: linear-gradient(to right, red, yellow, green, blue, pink);}
+div{
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(to right, red, yellow,green,blue,pink);
+    background-repeat: no-repeat;
+}
+div{
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(red, yellow, green, blue, pink);
+    float: inline-end;
+    background-repeat: no-repeat;
+}
+img{opacity: 0.5;
+    
+}

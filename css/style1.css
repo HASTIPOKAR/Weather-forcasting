@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+h3{
+    text-align: left;
+    color: black;
+}
+h2{
+    font-size:larger;
+    text-align: center;
+    color:brown;
+    background-color: black;
+}
+body{
+    color: black;
+    background-color: lightblue;
+    font-size: 20px;
+    margin: 30px;
+    border: 3px solid black;
+    
+}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Animation</title>
+  
+    <body>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                border: 5px solid pink;
+                border-radius: 50%;
+                background-color: lightblue;
+                animation-name: animation;
+                animation-duration: 5s;
+                /*animation-delay: 2s;*/
+                animation-iteration-count: infinite;
+                transform: translate(0px, 0px);
+                /*animation-direction: reverse;*/
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                position: relative;
+            }
+/*@keyframes animation {
+    from {background-color: lightblue; left: 0px; top: 0px;}
+    to {background-color: lightgreen; left: 200px; top: 200px;}
+}*/
+
+@keyframes animation {
+    0%   {background-color: lightblue; left: 0px; top: 0px}
+    20%  {background-color: lightgreen; left: 100px; top: 500px}
+    30%  {background-color: lightyellow; left: 200px; top: 200px}
+    40%  {background-color: lightcoral; left: 300px; top: 500px}
+    50% {background-color: red; left: 400px; top:200px}
+    60% {background-color: lightblue; left: 500px; top: 500px}
+    70% {left: 600px; top: 200px}
+    80% {left: 700px; top: 500px}
+    90% {left: 800px; top: 500px}
+    100%{left: 900px; top: 500px}
+}
+        </style>
+        </head>
+        <div>
+             
+        </div>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — WeatherCast</title>
+    <meta name="description" content="Get in touch with the WeatherCast team. Send us your feedback, questions, or suggestions.">
+    <link rel="stylesheet" href="../css/weather.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="bg-orbs">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="weather.html" class="nav-logo">
+                <div class="logo-icon">⛅</div>
+                <span>WeatherCast</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="weather.html">Home</a>
+                <a href="forecast.html">Forecast</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <div class="nav-auth" id="navAuth"></div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero" style="padding-bottom: 20px;">
+            <h1>Get In <span class="gradient-text">Touch</span></h1>
+            <p>Have a question, feedback, or suggestion? We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.</p>
+        </section>
+
+        <section class="contact-section">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-cards" style="margin-bottom: 32px;">
+                <div class="contact-info-card">
+                    <div class="info-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>support@weathercast.com</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="info-icon">📍</div>
+                    <h4>Location</h4>
+                    <p>Gujarat, India</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="info-icon">⏰</div>
+                    <h4>Hours</h4>
+                    <p>Mon — Fri, 9AM — 6PM</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:24px; display:flex; align-items:center; gap:8px;">✉️ Send us a Message</h3>
+
+                    <div class="auth-message" id="contactMessage"></div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">👤</span>
+                                <input type="text" id="contactName" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="field-error" id="contactNameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📧</span>
+                                <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+                            </div>
+                            <div class="field-error" id="contactEmailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMsg" name="message" placeholder="Write your message here..." required></textarea>
+                            <div class="field-error" id="contactMsgError"></div>
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="contactBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading"><div class="mini-spinner"></div></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">⛅ WeatherCast</div>
+            <p>Real-time weather forecasting powered by OpenWeather API</p>
+            <p>© 2026 WeatherCast. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="weather.html">Home</a>
+                <a href="forecast.html">Forecast</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/validation.js"></script>
+    <script src="../js/contact.js"></script>
+
+</body>
+</html>

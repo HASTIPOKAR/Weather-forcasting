@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 2 Form</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend><b>Your address</b></legend>
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td>Street</td>
+                <td><input type="text" name="street"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><b>Additional Details</b></legend>
+
+        <table>
+            <tr>
+                <td>Biography</td>
+                <td>
+                    <textarea rows="4" cols="25"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>Age Group</td>
+                <td>
+                    <select>
+                        <option>0 to 9 Years</option>
+                        <option>10 to 19 Years</option>
+                        <option>20 to 29 Years</option>
+                        <option>30 to 39 Years</option>
+                        <option>40+ Years</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><b>Interests</b></legend>
+
+        <table>
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <select multiple size="4">
+                        <option>Playing Soccer</option>
+                        <option>Dancing</option>
+                        <option>Gardening</option>
+                        <option>Watching Movies</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Favourite Car?</td>
+                <td>
+                    <select>
+                        <option>Volvo</option>
+                        <option>BMW</option>
+                        <option>Audi</option>
+                        <option>Mercedes</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Favourite Public Transport?</td>
+                <td>
+                    <input type="checkbox"> Ground <br>
+                    <input type="checkbox"> Train <br>
+                    <input type="checkbox"> Bus <br>
+                    <input type="checkbox"> Water
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+</body>
+</html>

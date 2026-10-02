@@ -1,0 +1,364 @@
+/* ============================================================
+   WeatherCast — Responsive Design
+   Breakpoints: 1024px (tablet), 768px, 640px, 480px (mobile)
+   ============================================================ */
+
+/* ---------- Tablet (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+    .side-panels {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forecast-page-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ---------- Small Tablet (≤ 768px) ---------- */
+@media (max-width: 768px) {
+    :root {
+        --nav-height: 64px;
+    }
+
+    /* Navigation */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: rgba(10, 14, 26, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 16px;
+        border-bottom: 1px solid var(--border-glass);
+        gap: 4px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-auth {
+        display: none;
+    }
+
+    .nav-links.open ~ .nav-auth,
+    .nav-auth.mobile-show {
+        display: flex;
+        position: absolute;
+        top: var(--nav-height);
+        right: 16px;
+    }
+
+    /* Move auth buttons into mobile nav */
+    .nav-links.open .mobile-auth {
+        display: flex;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-glass);
+        margin-top: 8px;
+        gap: 8px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 20px 30px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Search */
+    .search-section {
+        padding: 0 16px;
+        margin-bottom: 32px;
+    }
+
+    .search-box {
+        padding: 4px 4px 4px 16px;
+    }
+
+    .search-box input {
+        padding: 12px 0;
+        font-size: 0.95rem;
+    }
+
+    .search-box .search-btn {
+        padding: 10px 20px;
+        font-size: 0.88rem;
+    }
+
+    /* Weather */
+    .weather-main-card {
+        padding: 28px 20px;
+    }
+
+    .weather-temp {
+        font-size: 3.5rem;
+    }
+
+    .weather-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .detail-card {
+        padding: 16px;
+    }
+
+    .detail-card .detail-value {
+        font-size: 1.2rem;
+    }
+
+    /* Forecast */
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .forecast-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Auth */
+    .auth-card {
+        padding: 32px 24px;
+    }
+
+    .auth-header h2 {
+        font-size: 1.4rem;
+    }
+
+    /* About */
+    .about-grid {
+        gap: 16px;
+    }
+
+    .about-card {
+        padding: 24px;
+    }
+
+    /* Contact */
+    .contact-card {
+        padding: 28px 20px;
+    }
+
+    .contact-info-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 32px 20px;
+    }
+
+    .footer .footer-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    /* Panels */
+    .panel {
+        padding: 20px;
+    }
+}
+
+/* ---------- Mobile (≤ 640px) ---------- */
+@media (max-width: 640px) {
+    .weather-main-header {
+        flex-direction: column;
+    }
+
+    .weather-temp-block {
+        gap: 20px;
+    }
+
+    .weather-icon-wrap img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .weather-temp {
+        font-size: 3rem;
+    }
+
+    .weather-location h2 {
+        font-size: 1.5rem;
+    }
+
+    .weather-details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header p {
+        font-size: 0.92rem;
+    }
+
+    /* Toast */
+    .toast-container {
+        left: 16px;
+        right: 16px;
+    }
+
+    .toast {
+        max-width: 100%;
+    }
+}
+
+/* ---------- Small Mobile (≤ 480px) ---------- */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 28px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        padding: 12px;
+        gap: 10px;
+        border-radius: var(--radius-lg);
+    }
+
+    .search-box .search-icon {
+        display: none;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .search-box .search-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+        border-radius: var(--radius-md);
+    }
+
+    .weather-main-card {
+        padding: 20px 16px;
+    }
+
+    .weather-temp {
+        font-size: 2.5rem;
+    }
+
+    .weather-details-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .detail-card {
+        padding: 12px;
+    }
+
+    .detail-card .detail-label {
+        font-size: 0.72rem;
+    }
+
+    .detail-card .detail-value {
+        font-size: 1.05rem;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+        padding: 16px;
+    }
+
+    .forecast-card .forecast-icon img {
+        width: 44px;
+        height: 44px;
+        margin: 0;
+    }
+
+    .auth-card {
+        padding: 28px 20px;
+    }
+
+    .auth-header .auth-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+
+    .auth-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .form-group input {
+        padding: 12px 14px 12px 40px;
+        font-size: 0.9rem;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .contact-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-logo {
+        font-size: 1.15rem;
+    }
+
+    .nav-logo .logo-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

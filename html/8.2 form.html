@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body align="center">
+    <form onsubmit="validateForm(event)">
+    <fieldset>
+        <legend>Student Information Form</legend>
+        <label>Name:</label>
+        <input type="text" id="name">
+        <br><br>
+        <label>Email:</label>
+        <input type="email" id="email">
+        <br><br>
+        <label>Mobile No:</label>
+        <input type="number" id="mobile">
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender"/>Male
+        <input type="radio" name="gender"/>Female
+        <input type="radio" name="gender"/>Other
+        <br><br>
+        <label>Favorite Color:</label>
+        <select id="color">
+            <option value="">--Select Color--</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+        <br><br>
+        <label>Result:</label>
+        <br>
+        <textarea id="result" rows="5" cols="50" readonly></textarea>
+    </fieldset>
+    </form>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let color = document.getElementById("color").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+           
+            if (name == "") {
+                alert("Please enter your name");
+                return;
+            }
+            if (email == "") {
+                alert("Please enter your email");
+                return;
+            }
+            if (mobile == "") {
+                alert("Please enter your mobile number");
+                return;
+            }
+            if (mobile.length != 10 || isNaN(mobile)) {
+                alert("Mobile number must contain 10 digits");
+                return;
+            }
+            if (gender == null) {
+                alert("Please select your gender");
+                return;
+            }
+            if (color == "") {
+                alert("Please select your favorite color");
+                return;
+            }
+            let information =
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Mobile No: " + mobile + "\n" +
+                "Gender: " + gender.value + "\n" +
+                "Favorite Color: " + color;
+            document.getElementById("result").value = information;
+        }
+    </script>
+</body>
+</html>

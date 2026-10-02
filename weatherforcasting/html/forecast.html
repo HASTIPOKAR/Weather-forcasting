@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Forecast — WeatherCast</title>
+    <meta name="description" content="View detailed multi-day weather forecasts for any city. Get temperature, conditions, humidity, and wind information.">
+    <link rel="stylesheet" href="../css/weather.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="bg-orbs">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="weather.html" class="nav-logo">
+                <div class="logo-icon">⛅</div>
+                <span>WeatherCast</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="weather.html">Home</a>
+                <a href="forecast.html" class="active">Forecast</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-auth" id="navAuth"></div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero" style="padding-bottom: 20px;">
+            <h1>Multi-Day <span class="gradient-text">Forecast</span></h1>
+            <p>Get detailed weather predictions for the next 5 days. Plan ahead with accurate temperature, humidity, and wind forecasts.</p>
+        </section>
+
+        <!-- Search -->
+        <section class="search-section">
+            <div class="search-box" id="searchBox">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="cityInput" placeholder="Enter city for forecast..." autocomplete="off">
+                <button class="search-btn" id="searchBtn">
+                    <span>Get Forecast</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading -->
+        <div class="weather-container">
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Fetching forecast data...</p>
+            </div>
+
+            <!-- Error -->
+            <div class="error-message" id="errorMessage">
+                <div class="error-icon">😔</div>
+                <h3 id="errorTitle">Something went wrong</h3>
+                <p id="errorText">Please try again later.</p>
+            </div>
+
+            <!-- Forecast City Header -->
+            <div id="forecastHeader" style="display:none; text-align:center; margin-bottom:32px; animation: slideUp 0.4s ease;">
+                <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:4px;" id="forecastCity">—</h2>
+                <p style="color: var(--text-secondary); font-size:0.95rem;" id="forecastSubtitle">5-Day Weather Forecast</p>
+            </div>
+
+            <!-- Forecast Grid -->
+            <section class="forecast-page-section" style="padding-top:0;">
+                <div class="forecast-page-grid" id="forecastPageGrid">
+                    <!-- Cards injected by JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">⛅ WeatherCast</div>
+            <p>Real-time weather forecasting powered by OpenWeather API</p>
+            <p>© 2026 WeatherCast. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="weather.html">Home</a>
+                <a href="forecast.html">Forecast</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/validation.js"></script>
+    <script src="../js/forecast.js"></script>
+
+</body>
+</html>
